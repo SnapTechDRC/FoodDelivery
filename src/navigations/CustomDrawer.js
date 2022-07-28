@@ -1,15 +1,19 @@
-import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native'
+import { ImageBackground, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { DrawerContent, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
+const year = new Date().getFullYear();
 
 const CustomDrawer = (props) => {
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props} style={styles.ImageBackground}>
-                <ImageBackground source={require('../images/foodBg.jpg')}>
+                <ImageBackground source={require('../images/food.jpg')}>
                     <Image source={require('../images/Alex.jpg')} style={styles.smallImage} />
-                    <View style={{marginLeft: 5, marginBottom: 5}}>
+                    <View style={{ marginLeft: 5, marginBottom: 5 }}>
                         <Text style={[styles.username, styles.text]}>Alexis Senga Ngabo</Text>
                         <View style={{ flex: 1, flexDirection: 'row', }}>
                             <Text style={styles.text}>520 Followers</Text>
@@ -19,6 +23,23 @@ const CustomDrawer = (props) => {
                 </ImageBackground>
                 <DrawerItemList {...props} />
             </DrawerContentScrollView>
+            <View style={styles.bottomView}>
+                <TouchableOpacity style={{ paddingVertical: 5 }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Ionicons name='share-social-outline' color={'rebeccapurple'} size={20} />
+                        <Text style={{ fontSize: 15, marginLeft: 30, color: 'rebeccapurple' }}>Share</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ paddingVertical: 5 }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <MaterialIcons name="logout" color={'rebeccapurple'} size={20} />
+                        <Text style={{ fontSize: 15, marginLeft: 30, color: 'rebeccapurple' }}>Logout</Text>
+                    </View>
+                </TouchableOpacity>
+                <View style={[styles.textGray, { marginTop: 10 }]}>
+                    <Text>&copy; SnapTechDrc {year}</Text>
+                </View>
+            </View>
         </View>
     )
 }
@@ -44,5 +65,13 @@ const styles = StyleSheet.create({
     username: {
         fontSize: 18,
         fontWeight: '500'
+    },
+    bottomView: {
+        padding: 20,
+        borderTopWidth: 1,
+        borderTopColor: '#ccc',
+    },
+    textGray: {
+        color: '#ccc'
     }
 })
