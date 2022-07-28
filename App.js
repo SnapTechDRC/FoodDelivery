@@ -2,14 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import DrawerNav from './src/navigations/DrawerNav';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <View>
-        <Text>App</Text>
-        <Icon name='rocket' color={'red'} size={60} />
-      </View>
+      <DrawerNav />
     </NavigationContainer>
   )
 }
