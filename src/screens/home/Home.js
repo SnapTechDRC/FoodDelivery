@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, TextInput } from 'react-native'
+import { View, Text, Image, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './style'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -6,8 +6,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Entypo from 'react-native-vector-icons/Entypo'
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
+        <>
         <ScrollView style={styles.container}>
             <View>
                 <Image source={require('../../images/foodHome.jpg')} style={styles.ImageHomeTop} />
@@ -34,7 +35,7 @@ const Home = () => {
                     </View>
                 </View>
                 <View style={styles.foodHomeContainer}>
-                    <View style={styles.foodHomeItem}>
+                    <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
                         <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
                         <View>
                             <Text style={styles.textTitle}>Best Burger</Text>
@@ -46,8 +47,8 @@ const Home = () => {
                         <View style={{marginTop: 5}}>
                             <Text style={styles.priceText}>$ 5.40</Text>
                         </View>
-                    </View>
-                    <View style={styles.foodHomeItem}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
                         <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
                         <View>
                             <Text style={styles.textTitle}>Best Burger</Text>
@@ -59,8 +60,8 @@ const Home = () => {
                         <View style={{marginTop: 5}}>
                             <Text style={styles.priceText}>$ 5.40</Text>
                         </View>
-                    </View>
-                    <View style={styles.foodHomeItem}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
                         <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
                         <View>
                             <Text style={styles.textTitle}>Best Burger</Text>
@@ -72,8 +73,8 @@ const Home = () => {
                         <View style={{marginTop: 5}}>
                             <Text style={styles.priceText}>$ 5.40</Text>
                         </View>
-                    </View>
-                    <View style={styles.foodHomeItem}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
                         <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
                         <View>
                             <Text style={styles.textTitle}>Best Burger</Text>
@@ -85,10 +86,11 @@ const Home = () => {
                         <View style={{marginTop: 5}}>
                             <Text style={styles.priceText}>$ 5.40</Text>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         </ScrollView>
+        </>
     )
 }
 
