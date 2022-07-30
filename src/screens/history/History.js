@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 const History = () => {
   return (
     <View style={styles.container}>
-      <Icon name="history" color={'lightblue'} size={80} />
+      <Icon name="history" color={'orange'} size={80} />
     </View>
   )
 }

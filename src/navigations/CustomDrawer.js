@@ -16,7 +16,7 @@ const CustomDrawer = (props) => {
                     <View style={{ marginLeft: 5, marginBottom: 5 }}>
                         <Text style={[styles.username, styles.text]}>Alexis Senga Ngabo</Text>
                         <View style={{ flex: 1, flexDirection: 'row', }}>
-                            <Text style={styles.text}>520 Followers</Text>
+                            <Text style={styles.text}>520 Orders</Text>
                             <FontAwesome5 name='coins' color={'#fff'} size={14} />
                         </View>
                     </View>

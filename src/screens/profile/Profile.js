@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Feather'
 const Profile = () => {
   return (
     <View style={styles.container}>
-      <Icon name="user" size={80} color={'lightblue'} />
+      <Icon name="user" size={80} color={'orange'} />
     </View>
   )
 }

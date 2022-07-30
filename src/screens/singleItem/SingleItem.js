@@ -51,7 +51,7 @@ const SingleItem = ({ navigation }) => {
       </ScrollView>
       <View style={styles.checkoutContainer}>
         <Text style={styles.price}>$ 25.80</Text>
-        <TouchableOpacity style={styles.buttonCheckout}>
+        <TouchableOpacity style={styles.buttonCheckout} onPress={() => navigation.navigate('OrderTrack')}>
           <Text style={styles.innerButton}>Checkout</Text>
         </TouchableOpacity>
       </View>

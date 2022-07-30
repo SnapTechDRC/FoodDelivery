@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
+import styles from './style'
+import Icon from 'react-native-vector-icons/Feather'
 
 const Favorite = () => {
   return (
-    <View>
-      <Text>Favorite</Text>
+    <View style={styles.container}>
+      <Icon name="heart" size={80} color={'orange'} />
     </View>
   )
 }
 
 export default Favorite
-
-const styles = StyleSheet.create({})

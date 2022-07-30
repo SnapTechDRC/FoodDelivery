@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginHorizontal: 30,
-        borderColor: '#edecec',
+        borderColor: '#d3d3d369',
         borderWidth: 2,
         marginTop: 5,
         borderRadius: 5
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         height: 200
     },
     foodHomeContainer: {
-        marginTop: 40,
+        marginTop: 20,
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -59,7 +59,10 @@ const styles = StyleSheet.create({
     },
     foodHomeItem: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#fff',
+        marginBottom: 10,
+        paddingBottom: 5
     },
     textTitle: {
         fontWeight: 'bold',
