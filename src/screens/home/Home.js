@@ -9,8 +9,8 @@ import Entypo from 'react-native-vector-icons/Entypo'
 const Home = ({navigation}) => {
     return (
         <>
-        <ScrollView style={styles.container}>
-            <View style={{marginBottom: 60}}>
+        <ScrollView style={styles.scrollView}>
+            <View style={styles.container}>
                 <Image source={require('../../images/foodHome.jpg')} style={styles.ImageHomeTop} />
                 <View style={styles.inputGroup}>
                     <Icon name="search" color={'lightgray'} size={22} />

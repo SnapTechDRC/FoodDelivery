@@ -60,8 +60,9 @@ const styles = StyleSheet.create({
         marginBottom: 5
     },
     productTitle: {
-        fontSize: 28,
-        fontWeight: 'bold'
+        fontSize: 25,
+        fontWeight: 'bold',
+        color: '#000'
     },
     productSubTitle: {
         fontSize: 15,

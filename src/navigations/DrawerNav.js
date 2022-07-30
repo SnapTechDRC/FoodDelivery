@@ -39,7 +39,7 @@ const DrawerNav = () => {
                 )
             }}
         >
-            <Drawer.Screen name='Home' component={BottomTab} options={{ title: 'SnapDelivery', drawerIcon: ({ color }) => <Ionicons name="home-outline" size={20} color={color} /> }} />
+            <Drawer.Screen name='Home' component={BottomTab} options={{headerTitle: 'SnapDelivery', title: 'Home', drawerIcon: ({ color }) => <Ionicons name="home-outline" size={20} color={color} /> }} />
             <Drawer.Screen name='Profile' component={Profile} options={{ drawerIcon: ({ color }) => <Feather name="user" size={20} color={color} /> }} />
             <Drawer.Screen name='Notification' component={Notification} options={{ drawerIcon: ({ color }) => <AntDesign name="bells" size={20} color={color} /> }} />
             <Drawer.Screen name='History' component={History} options={{ drawerIcon: ({ color }) => <Icon name="history" size={23} color={color} /> }} />

@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        paddingHorizontal: 5
     },
     ImageSingleProduct: {
         width: '100%',
@@ -67,9 +67,9 @@ const styles = StyleSheet.create({
     },
     deliverPhone: {
         position: 'absolute',
-        right: 7,
+        right: 5,
         flexDirection: 'row',
-        top: 10,
+        top: 10
     },
     deliverName: {
         fontSize: 18,

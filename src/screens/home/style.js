@@ -1,8 +1,12 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-    container: {
+    scrollView: {
         flex: 1
+    },
+    container: {
+        marginBottom: 60,
+        paddingHorizontal: 5
     },
     ImageHomeTop: {
         width: '100%',
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     burgerImage: {
-        width: 200,
+        width: '100%',
         height: 200
     },
     foodHomeContainer: {
@@ -58,11 +62,14 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap'
     },
     foodHomeItem: {
+        flexGrow: 1,
+        flexBasis: '48%',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fff',
-        marginBottom: 10,
-        paddingBottom: 5
+        marginVertical: 3,
+        paddingBottom: 5,
+        marginHorizontal: 3
     },
     textTitle: {
         fontWeight: 'bold',
