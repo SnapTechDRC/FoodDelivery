@@ -6,7 +6,7 @@ import Icon from "react-native-vector-icons/AntDesign";
 const Notification = () => {
   return (
     <View style={styles.container}>
-      <Icon name="bells" size={80} color={'lightblue'} />
+      <Icon name="bells" size={80} color={'orange'} />
     </View>
   )
 }

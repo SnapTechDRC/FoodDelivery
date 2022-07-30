@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native'
 import React from 'react'
 import styles from './style'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -9,8 +9,8 @@ import Entypo from 'react-native-vector-icons/Entypo'
 const Home = ({navigation}) => {
     return (
         <>
-        <ScrollView style={styles.container}>
-            <View>
+        <ScrollView style={styles.scrollView}>
+            <View style={styles.container}>
                 <Image source={require('../../images/foodHome.jpg')} style={styles.ImageHomeTop} />
                 <View style={styles.inputGroup}>
                     <Icon name="search" color={'lightgray'} size={22} />
@@ -49,9 +49,9 @@ const Home = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
-                        <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
+                        <Image source={require('../../images/fries.jpg')} style={styles.burgerImage} />
                         <View>
-                            <Text style={styles.textTitle}>Best Burger</Text>
+                            <Text style={styles.textTitle}>Frites</Text>
                         </View>
                         <View style={styles.priceContainer}>
                             <Text style={{paddingRight: 20}}>30Mn</Text>
@@ -62,9 +62,9 @@ const Home = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
-                        <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
+                        <Image source={require('../../images/chicken.jpg')} style={styles.burgerImage} />
                         <View>
-                            <Text style={styles.textTitle}>Best Burger</Text>
+                            <Text style={styles.textTitle}>Chicken</Text>
                         </View>
                         <View style={styles.priceContainer}>
                             <Text style={{paddingRight: 20}}>30Mn</Text>
@@ -75,9 +75,9 @@ const Home = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
-                        <Image source={require('../../images/burger.jpg')} style={styles.burgerImage} />
+                        <Image source={require('../../images/popcorn.jpg')} style={styles.burgerImage} />
                         <View>
-                            <Text style={styles.textTitle}>Best Burger</Text>
+                            <Text style={styles.textTitle}>Pop corn</Text>
                         </View>
                         <View style={styles.priceContainer}>
                             <Text style={{paddingRight: 20}}>30Mn</Text>
@@ -87,6 +87,35 @@ const Home = ({navigation}) => {
                             <Text style={styles.priceText}>$ 5.40</Text>
                         </View>
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
+                        <Image source={require('../../images/salad.png')} style={styles.burgerImage} />
+                        <View>
+                            <Text style={styles.textTitle}>Salad</Text>
+                        </View>
+                        <View style={styles.priceContainer}>
+                            <Text style={{paddingRight: 20}}>30Mn</Text>
+                            <Text>120 Sell</Text>
+                        </View>
+                        <View style={{marginTop: 5}}>
+                            <Text style={styles.priceText}>$ 5.40</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.foodHomeItem} onPress={() => navigation.navigate('SingleItem')}>
+                        <Image source={require('../../images/champagne.png')} style={styles.burgerImage} />
+                        <View>
+                            <Text style={styles.textTitle}>Pop corn</Text>
+                        </View>
+                        <View style={styles.priceContainer}>
+                            <Text style={{paddingRight: 20}}>30Mn</Text>
+                            <Text>120 Sell</Text>
+                        </View>
+                        <View style={{marginTop: 5}}>
+                            <Text style={styles.priceText}>$ 5.40</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+                <View style={{marginTop: 40}}>
+                    <ActivityIndicator size={30} color={'darkorange'} />
                 </View>
             </View>
         </ScrollView>
