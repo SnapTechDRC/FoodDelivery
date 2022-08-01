@@ -3,8 +3,12 @@ import { StyleSheet, Text, View } from 'react-native'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        padding: 5
+    },
+    imagesProfile: {
+        width: 80,
+        height: 80,
+        borderRadius: 50
     }
 })
 
