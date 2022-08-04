@@ -44,29 +44,31 @@ const Profile = () => {
             <Text>My Accout</Text>
           </View>
           <View style={styles.inputGroup}>
-            <View>
+            <View style={styles.leftIcon}>
               <Entypo name='email' size={18} />
             </View>
             <TextInput style={styles.input} placeholder="Email Adress" />
           </View>
           <View style={styles.inputGroup}>
-            <View>
+            <View style={styles.leftIcon}>
               <AntDesign name='user' size={18} />
             </View>
             <TextInput style={styles.input} placeholder="Username" />
           </View>
           <View style={styles.inputGroup}>
-            <View>
+            <View style={styles.leftIcon}>
               <FontAwesome name='lock' size={18} />
             </View>
-            <View>
+            <View style={styles.rightIcon}>
               <FontAwesome name='eye' size={16} />
             </View>
             <TextInput style={styles.input} secureTextEntry={true} placeholder="Password" />
           </View>
           <View style={styles.inputGroup}>
-            <Text style={styles.label}>Birth Date(Optional)</Text>
-            <TextInput style={styles.input} />
+            <View style={styles.leftIcon}>
+              <Entypo name='calendar' size={16} />
+            </View>
+            <TextInput style={styles.input} placeholder="Birthday(optional)" />
           </View>
         </View>
         <View style={styles.Joined}>
