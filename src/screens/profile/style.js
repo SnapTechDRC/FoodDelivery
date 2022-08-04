@@ -69,6 +69,15 @@ const styles = StyleSheet.create({
     Joined: {
         marginTop: 50,
         marginBottom: 7
+    },
+    leftIcon: {
+        position: 'absolute',
+        top: 15
+    },
+    rightIcon: {
+        position: 'absolute',
+        top: 20,
+        right: 10
     }
 })
 
