@@ -1,12 +1,17 @@
-import { Image, ScrollView, Text, TextInput, View } from 'react-native'
-import React from 'react'
+import { Image, ScrollView, Text, TextInput, Button, View, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
 import styles from './style'
 import Feather from 'react-native-vector-icons/Feather'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Entypo from 'react-native-vector-icons/Entypo'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import DatePicker from 'react-native-date-picker'
+
 
 const Profile = () => {
+  const [date, setDate] = useState(new Date())
+  const [open, setOpen] = useState(false)
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -24,6 +29,19 @@ const Profile = () => {
         </View>
         <View style={styles.statusContainer}>
           <View>
+            <DatePicker
+              mode='date'
+              modal
+              open={open}
+              date={date}
+              onConfirm={(date) => {
+                setOpen(false)
+                setDate(date)
+              }}
+              onCancel={() => {
+                setOpen(false)
+              }}
+            />
             <Text style={styles.statusTitle}>My Status</Text>
           </View>
           <View style={styles.statusFlex}>
@@ -65,10 +83,12 @@ const Profile = () => {
             <TextInput style={styles.input} secureTextEntry={true} placeholder="Password" />
           </View>
           <View style={styles.inputGroup}>
-            <View style={styles.leftIcon}>
+            <View style={styles.leftIcon} >
               <Entypo name='calendar' size={16} />
             </View>
-            <TextInput style={styles.input} placeholder="Birthday(optional)" />
+            <TouchableOpacity style={[styles.input, { marginTop: 13, paddingBottom: 5 }]} onPress={() => setOpen(true)}>
+              <Text>Birthday(Optional)</Text>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.Joined}>
